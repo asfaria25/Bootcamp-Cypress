@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-04-03T22:39:36.143Z",
-    "end": "2021-04-03T22:39:56.264Z",
-    "duration": 20121,
+    "start": "2021-04-03T22:44:50.587Z",
+    "end": "2021-04-03T22:45:15.940Z",
+    "duration": 25353,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7bddbdc9-d43a-42e2-a35b-c83a55685a80",
+      "uuid": "60570449-7719-4afb-ae90-9af0bbb09076",
       "title": "",
       "fullFile": "cypress/integration/new_user.spec.js",
       "file": "cypress/integration/new_user.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "abeff5d4-1761-43b9-822e-0fa2fcc2d4d2",
+          "uuid": "1b84d12b-23e5-4be8-9bc6-0873f937110a",
           "title": "Cadastrar um novo Usuário",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Efetuar cadastro de um novo usuário",
               "fullTitle": "Cadastrar um novo Usuário Efetuar cadastro de um novo usuário",
               "timedOut": null,
-              "duration": 19922,
+              "duration": 25107,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "//Acessar o site automation practice\ncy.visit('/'); //Clicar no botão de Sign in\ncy.get('.login').should('be.visible').click(); //Preencher as informações de e-mail \ncy.url().should('equal', 'http://automationpractice.com/index.php?controller=authentication&back=my-account');\ncy.get('#email_create').should('be.visible').type(chance.email()); //Clicar no botão Create an Account\ncy.get('#SubmitCreate').should('be.visible').click(); //Preencher as informações do formulário de cadastro\ncy.url().should('contain', 'http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation'); //Title\ncy.get('#id_gender1').should('be.visible').check(); //First Name\ncy.get('#customer_firstname').should('be.visible').type(chance.first()); //Last Name\ncy.get('#customer_lastname').should('be.visible').click().type(chance.last()); //Password\ncy.get('#passwd').should('be.visible').type(chance.string({\n  length: 10,\n  alpha: true,\n  numeric: true\n})); // Date of Bird\nvar day = chance.natural({\n  min: 1,\n  max: 31\n});\nvar days = day.toString();\nvar month = chance.natural({\n  min: 1,\n  max: 12\n});\nvar months = month.toString();\nvar year = chance.natural({\n  min: 1950,\n  max: 2021\n});\nvar years = year.toString();\ncy.get('select#days').should('be.visible').select(days);\ncy.get('#months').should('be.visible').select(months);\ncy.get('#years').should('be.visible').select(years); //Company\ncy.get('#company').should('be.visible').type(chance.company()); //Adress\ncy.get('#address1').should('be.visible').type(chance.address());\ncy.get('#city').should('be.visible').type(chance.city());\nvar state = chance.natural({\n  min: 1,\n  max: 53\n});\nvar states = state.toString();\ncy.get('#id_state').should('be.visible').select(states);\ncy.get('#postcode').should('be.visible').type(chance.zip());\ncy.get('#phone_mobile').should('be.visible').type(chance.phone());\ncy.get('#alias').should('be.visible').clear().type(chance.address()); //Clicar no botão Register\ncy.get('#submitAccount').should('be.visible').click(); //Validar que foi redirecionado para a url correta\ncy.url().should('contain', 'http://automationpractice.com/index.php?controller=my-account'); //Validar exibição do texto 'Welcome to your account'\ncy.get('.info-account').should('contain', 'Welcome to your account');",
               "err": {},
-              "uuid": "341d8c91-8fa7-4e55-a58e-feec0d008050",
-              "parentUUID": "abeff5d4-1761-43b9-822e-0fa2fcc2d4d2",
+              "uuid": "547efce3-dcae-4013-aa42-93dbf131ba67",
+              "parentUUID": "1b84d12b-23e5-4be8-9bc6-0873f937110a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "341d8c91-8fa7-4e55-a58e-feec0d008050"
+            "547efce3-dcae-4013-aa42-93dbf131ba67"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 19922,
+          "duration": 25107,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
